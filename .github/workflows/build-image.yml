@@ -61,6 +61,5 @@ jobs:
     steps:
       - name: Comment with image info
         run: |
-          IMAGE="ghcr.io/${{ github.repository_owner }}/${{ github.repository.toLowerCase().split('/')[1] }}:${{ inputs.tag || 'latest' }}"
+          IMAGE="ghcr.io/${{ github.repository_owner }}/nanoclaw:${{ inputs.tag || 'latest' }}"
           echo "Built image: $IMAGE"
-          echo "IMAGE=$IMAGE" >> $GITHUB_ENV
